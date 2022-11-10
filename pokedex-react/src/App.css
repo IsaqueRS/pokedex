@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.pokemon-card-container {
+  padding-left: 20rem;
+  align-items: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-item-pokemon {
+  padding: 1.5rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
