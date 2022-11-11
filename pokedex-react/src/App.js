@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useTransition } from 'react';
 import './App.css'; 
 import { PokemonsFetch } from './api/services/pokemon';
-import { PokemonsImageFetch } from './api/services/pokemonImage'
 import logo from './logo.svg'
 
 import Card from '@mui/material/Card';
@@ -35,20 +34,6 @@ function App() {
     getPokemons();
   },[]);
 
-  useEffect(() => {
-    async function getPokemonsImage() {
-       try {
-         const resultPokemonsImage = await PokemonsImageFetch();
-         //console.log((resultPokemons.pokemons).flat());
-         //const flatResultPokemon = (resultPokemons.pokemons).flat();
-         setPokemonImage(resultPokemonsImage.pokemonImage);
-       } catch(error) {
-         console.log(error)
-       }
-     }
-     getPokemonsImage();
-   },[]);
-
   return(
     <div>
       <AppBar position="static">
@@ -67,7 +52,7 @@ function App() {
         <Card sx={{ maxWidth: 350, backgroundColor: "endregion" }}>
           <CardMedia
           component="img"
-          alt="green iguana"
+          alt="pokemon"
           height="140"
           image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonLoop.entry_number}.png`} 
           />
