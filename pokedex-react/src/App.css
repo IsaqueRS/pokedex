@@ -16,3 +16,19 @@
   height: 30px;
   width: 30px;
 }
+
+.card-content {
+  align-self: center;
+  align-content: center;
+}
+
+.searchInput {
+  margin-left: 17.5rem;
+  display: flex;
+  border-radius: 2px;
+  border: 0px;
+  height: 30px;
+  width: 300px;
+}
+
+
